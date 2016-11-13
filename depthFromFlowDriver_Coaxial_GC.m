@@ -176,6 +176,10 @@ for smoothingFactor = [2]
             end
         end
     end
+    
+    [ imgOut ] = radial2XY(depthMap, 4);
+    imtool(mirrorHorz(imgOut))
+    
     rayOut1_f(2,2)*(optimalLabelling(1) + minLabel - b)*10/1307.53356
     t=toc
 end
